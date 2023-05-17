@@ -2,10 +2,12 @@ const cards = document.querySelectorAll('.card');
 let cardOne, cardTwo;
 let disableDeck = false;
 let matchedCard = 0; 
-
+const sc2 = document.querySelector('.sc2')
+let score = 0;
 
 function flipCard(e){ 
     let clickedCard = e.target; //getting user clicked card
+    
 
     if(clickedCard !== cardOne && !disableDeck){ 
         clickedCard.classList.add('flip');
@@ -26,8 +28,14 @@ function flipCard(e){
 function matchCards(img1, img2){ 
 
     if(img1 === img2){ // if two cards img matched
+        score++;
+        sc2.innerHTML = score
+
         matchedCard++; //increment matched value by one
-        if(matchedCard == 8){ // if matched value is 8 that means user has matched all the cards
+        if(matchedCard == 8){
+
+
+             // if matched value is 8 that means user has matched all the cards
 
             setTimeout(() => { 
                 return shuffleCard();
@@ -58,6 +66,7 @@ function matchCards(img1, img2){
 
 function shuffleCard(){
     matchedCard = 0;
+    score = 0;
     cardOne = cardTwo = "";
 
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8]; //creating array of 16 items and each item is repeated twice

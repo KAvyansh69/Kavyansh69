@@ -24,6 +24,7 @@ body {
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 0 10px;
+    padding-bottom: 65px;
 }
 .cards,
 .card,
@@ -85,9 +86,23 @@ body {
 .card.flip .front-view{
     transform: rotateY(180deg);
 }
+
 /*JS 7.2*/
 .card.shake{
     animation: shake 0.35s ease-in-out;
+}
+.sc{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    float: left;
+}
+.sc2{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+    float: right;
+    margin-right: 310px;
 }
 @keyframes shake {
     0%, 100%{
