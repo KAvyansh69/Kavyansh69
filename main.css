@@ -18,13 +18,13 @@ body {
 }
 
 .container{
-    height: 500px;
+    height: 590px;
     width: 500px;
     background: linear-gradient(to right, #fc6767, #ec008c);
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 0 10px;
-    padding-bottom: 65px;
+    padding-bottom: 120px;
 }
 .cards,
 .card,
