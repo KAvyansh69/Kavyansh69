@@ -7,6 +7,7 @@ let score = 0;
 
 let green = document.querySelector('#gr');
 let main = document.querySelector('.container');
+let he1 = document.querySelector('.h1');
 
 
 function startTimer(duration, display) {
@@ -36,6 +37,23 @@ timer = function () {
 green.addEventListener('click', ()=>{
     green.style.display = 'none';
     main.style.filter = 'blur(0px)';
+    he1.style.display = 'none';
+    timer();
+    if (true) {
+        var delayInMilliseconds = 30000; //1 second
+    
+        setTimeout(function() {
+            window.location.reload()
+    
+            score = 0;
+        }, delayInMilliseconds);
+    }
+
+})
+he1.addEventListener('click', ()=>{
+    green.style.display = 'none';
+    main.style.filter = 'blur(0px)';
+    he1.style.display = 'none';
     timer();
     if (true) {
         var delayInMilliseconds = 30000; //1 second

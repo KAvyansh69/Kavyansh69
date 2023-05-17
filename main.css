@@ -140,7 +140,8 @@ body {
     font-size: xx-large;
     font-family: 'Roboto',sans-serif;
     margin: auto;
-
+    cursor: pointer;
+    z-index: 2;
 }
 @keyframes shake {
     0%, 100%{
