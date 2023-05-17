@@ -5,8 +5,58 @@ let matchedCard = 0;
 const sc2 = document.querySelector('.sc2')
 let score = 0;
 
+let green = document.querySelector('#gr');
+let main = document.querySelector('.container');
+
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+timer = function () {
+    var fiveMinutes = 30 * 1,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
+
+
+green.addEventListener('click', ()=>{
+    green.style.display = 'none';
+    main.style.filter = 'blur(0px)';
+    timer();
+    if (true) {
+        var delayInMilliseconds = 30000; //1 second
+    
+        setTimeout(function() {
+            window.location.reload()
+    
+            score = 0;
+        }, delayInMilliseconds);
+    }
+
+})
+
+
+
+
+
+
 
 function flipCard(e){ 
+    
     let clickedCard = e.target; //getting user clicked card
     
 
@@ -89,36 +139,8 @@ cards.forEach(card => { // adding click event to all cards
     card.addEventListener('click', flipCard); 
 });
 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
-
-window.onload = function () {
-    var fiveMinutes = 30 * 1,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-};
-
-if (true) {
-    var delayInMilliseconds = 30000; //1 second
-
-    setTimeout(function() {
-        window.location.reload();
-    }, delayInMilliseconds);
-}
 
 
 //HELLO
