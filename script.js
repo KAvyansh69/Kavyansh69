@@ -67,6 +67,7 @@ function matchCards(img1, img2){
 function shuffleCard(){
     matchedCard = 0;
     score = 0;
+    sc2.innerHTML = score
     cardOne = cardTwo = "";
 
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8]; //creating array of 16 items and each item is repeated twice
